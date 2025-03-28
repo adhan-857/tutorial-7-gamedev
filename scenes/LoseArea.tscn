@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0svneq1l2eeq"]
+
+[ext_resource type="Script" path="res://scenes/lose_area.gd" id="1_de3p2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jvf0q"]
+
+[node name="AreaTrigger" type="Area3D"]
+script = ExtResource("1_de3p2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_jvf0q")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+visible = false
+
+[connection signal="body_entered" from="." to="." method="_on_Area_Trigger_body_entered"]

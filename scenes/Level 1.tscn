@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://busme1qo0qeum"]
+
+[ext_resource type="PackedScene" uid="uid://h2j4l6jc8cgd" path="res://scenes/Player.tscn" id="1_k1a6i"]
+[ext_resource type="PackedScene" uid="uid://bl4aca1ato4fw" path="res://scenes/World 1.tscn" id="2_kc5la"]
+[ext_resource type="PackedScene" uid="uid://cddhpa02nxlk8" path="res://scenes/WinArea.tscn" id="3_u4gs8"]
+[ext_resource type="PackedScene" uid="uid://d0svneq1l2eeq" path="res://scenes/LoseArea.tscn" id="4_yjlvk"]
+
+[node name="Level 1" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_k1a6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="World 1" parent="." instance=ExtResource("2_kc5la")]
+
+[node name="OmniLight3D-Main" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.34056, -15.5161)
+light_energy = 5.0
+distance_fade_enabled = true
+omni_range = 50.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.74379, 23.8734)
+light_color = Color(1, 1, 0.556863, 1)
+light_energy = 2.0
+omni_range = 50.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -3.744, -42.984)
+light_color = Color(1, 1, 0.556863, 1)
+light_energy = 2.0
+omni_range = 50.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -3.744, -42.984)
+light_color = Color(1, 1, 0.556863, 1)
+light_energy = 2.0
+omni_range = 50.0
+
+[node name="AreaTrigger" parent="." instance=ExtResource("3_u4gs8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.7526, -41.2059)
+
+[node name="AreaTrigger2" parent="." instance=ExtResource("4_yjlvk")]
+transform = Transform3D(35.168, 0, 0, 0, 3.956, 0, 0, 0, 20, 0, -25.2855, 0)
+
+[node name="AreaTrigger3" parent="." instance=ExtResource("4_yjlvk")]
+transform = Transform3D(35.168, 0, 0, 0, 3.956, 0, 0, 0, 20, 0, -25.003, -34.3085)

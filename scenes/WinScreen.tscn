@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlre45sgwaawf"]
+
+[ext_resource type="Texture2D" uid="uid://cxkmwk6kovf3" path="res://assets/Keanu.png" id="1_yuxpi"]
+
+[node name="WinScreen" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1158.0
+offset_bottom = 657.0
+texture = ExtResource("1_yuxpi")
+expand_mode = 5
